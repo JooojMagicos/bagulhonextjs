@@ -1,0 +1,32 @@
+[
+  {
+    "title": "React",
+    "image": "react.png",
+    "description": "Biblioteca JavaScript para construção de interfaces de utilizador baseadas em componentes.",
+    "rating": 5
+  },
+  {
+    "title": "Next.js",
+    "image": "nextjs.png",
+    "description": "Framework React com renderização híbrida, roteamento automático e otimização para SEO.",
+    "rating": 5
+  },
+  {
+    "title": "TypeScript",
+    "image": "typescript.png",
+    "description": "Superset do JavaScript que adiciona tipagem estática e maior segurança ao desenvolvimento.",
+    "rating": 4
+  },
+  {
+    "title": "Tailwind CSS",
+    "image": "tailwind.png",
+    "description": "Framework CSS utilitário para criação rápida de designs responsivos.",
+    "rating": 4
+  },
+  {
+    "title": "Node.js",
+    "image": "node.png",
+    "description": "Ambiente de execução JavaScript server-side baseado no motor V8.",
+    "rating": 3
+  }
+]
