@@ -28,5 +28,35 @@
     "image": "node.png",
     "description": "Ambiente de execução JavaScript server-side baseado no motor V8.",
     "rating": 3
+  },
+  {
+    "title": "Java",
+    "image": "java.png",
+    "description": "Linguagem de programação orientada a objetos, portátil e amplamente usada em aplicações corporativas e Android.",
+    "rating": 5
+  },
+  {
+    "title": "C++",
+    "image": "cpp.png",
+    "description": "Linguagem de programação de propósito geral com suporte a programação estruturada e orientada a objetos.",
+    "rating": 4
+  },
+  {
+    "title": "C",
+    "image": "c.png",
+    "description": "Linguagem de programação procedural de baixo nível, muito usada para sistemas e softwares de alto desempenho.",
+    "rating": 4
+  },
+  {
+    "title": "C#",
+    "image": "csharp.png",
+    "description": "Linguagem de programação orientada a objetos desenvolvida pela Microsoft para a plataforma .NET.",
+    "rating": 4
+  },
+  {
+    "title": "Python",
+    "image": "python.png",
+    "description": "Linguagem de programação de alto nível, conhecida por sua sintaxe clara e grande variedade de bibliotecas.",
+    "rating": 5
   }
 ]

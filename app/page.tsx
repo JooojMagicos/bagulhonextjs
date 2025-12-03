@@ -10,6 +10,10 @@ export function Header()
           <Link href="/sobre">Sobre</Link>
           <Link href="/caracteristicas">caracteristica</Link>
           <Link href="/tecnologias">Tecnologias</Link>
+          <Link href="/projetos">Projetos</Link>
+          <Link href="/contador">Contador</Link>
+          <Link href="/input">Input</Link>
+
         </nav>
     </header>
   )

@@ -1,0 +1,123 @@
+/* ======== ESTILO DA PÁGINA DE PROJETOS ======== */
+
+/* Container principal */
+.projetos-container {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: 3rem auto;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Título */
+.projetos-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1d3557;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+/* Texto explicativo */
+.projetos-text {
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 1.7rem;
+    font-size: 1.1rem;
+}
+
+.projetos-text a {
+    color: #2563eb;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.projetos-text a:hover {
+    opacity: 0.8;
+}
+
+/* ======== ESTILO DE CADA PROJETO ======== */
+
+.projeto-item {
+    background: white;
+    border-left: 5px solid #4f46e5;
+    padding: 1.1rem 1.4rem;
+    margin: 1rem 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s, box-shadow 0.3s;
+    font-size: 1.05rem;
+}
+
+.projeto-item:hover {
+    transform: translateX(6px);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Link do projeto */
+.projeto-item a {
+    color: #4f46e5;
+    font-weight: bold;
+    margin-left: 4px;
+    transition: opacity .2s, text-decoration .2s;
+}
+
+.projeto-item a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+/* ======== HEADER GLOBAL ======== */
+
+header {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* Navegação dentro do header */
+header nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Links do menu */
+header nav a {
+    font-weight: 600;
+    color: #1e293b;
+    transition: color 0.2s, transform 0.2s;
+}
+
+header nav a:hover {
+    color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+/* Estado ativo opcional */
+header nav a.active {
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+
+/* ======== ANIMAÇÃO ======== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

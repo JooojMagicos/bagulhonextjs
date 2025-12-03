@@ -1,0 +1,176 @@
+.tecnologias-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tecnologia-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.3s;
+}
+
+.tecnologia-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-tecnologia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+}
+
+.voltar-btn {
+  margin-top: 2rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #4f46e5;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.voltar-btn:hover {
+  background-color: #3730a3;
+}
+
+/* ======== IMAGEM ======== */
+.tecnologia-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* ======== TÍTULO ======== */
+.tecnologia-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1d3557;
+    margin-bottom: 0.5rem;
+}
+
+/* ======== DESCRIÇÃO ======== */
+.tecnologia-card p {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+/* ======== LINK PARA DETALHES ======== */
+.tecnologia-card a {
+    color: #4f46e5;
+    font-weight: bold;
+    text-decoration: none;
+    transition: opacity 0.2s, text-decoration 0.2s;
+}
+
+.tecnologia-card a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/* ======== PÁGINA DE DETALHES ======== */
+.tecnologia-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.card-tecnologia {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.card-tecnologia img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 1rem;
+}
+
+.card-tecnologia h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1d3557;
+    margin-bottom: 0.75rem;
+}
+
+
+.card-tecnologia .rating {
+    color: #facc15;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* ======== BOTÃO VOLTAR ======== */
+.voltar-btn {
+    margin-top: 2rem;
+    padding: 0.6rem 1.5rem;
+    background-color: #4f46e5;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.voltar-btn:hover {
+    background-color: #3730a3;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 768px) {
+    .tecnologias-container {
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .tecnologia-card {
+        width: 140px;
+        padding: 1rem;
+    }
+
+    .tecnologia-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-tecnologia {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .card-tecnologia img {
+        width: 72px;
+        height: 72px;
+    }
+}

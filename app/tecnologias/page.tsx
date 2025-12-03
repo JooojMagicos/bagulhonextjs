@@ -1,22 +1,25 @@
-import tecnologias from '@/app/data/tecnologias.json';
+import Link from "next/link";
+import tecnologias from "@/app/data/tecnologias.json";
+import "@/styles/tecnologias.css";
+import ContadorPersonalizado from "@/Components/contadorPersonalizado";
 
-export default function Page() {
-
-  const Tecnologias = JSON.parse(JSON.stringify(tecnologias));
-
+export default function TecnologiasPage() {
   return (
-    <div>
-      <h1>Tecnologias</h1>
-      <ul>
-        {tecnologias.map((tec, i) => (
-          <li key={i}>
-            <h2>{tec.title}</h2>
-            <img src={`/img/${tec.image}`} alt={tec.title} width={80} />
-            <p>{tec.description}</p>
-            <strong>Rating: {tec.rating}⭐</strong>
-          </li>
-        ))}
-      </ul>
+    <div className="tecnologias-container">
+      {tecnologias.map((tec, index) => (
+        <div key={index} className="tecnologia-card">
+          <img src={`/img/${tec.image}`} alt={tec.title} />
+          <h3>{tec.title}</h3>
+          <p>{tec.description.substring(0, 60)}...</p>
+
+          {/* Contador de likes */}
+          <ContadorPersonalizado title={tec.title} />
+
+          <Link href={`/tecnologias/${index}`} className="ver-detalhes">
+            Ver detalhes
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }
