@@ -1,7 +1,8 @@
+"use client";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Relogio from "@/components/relogio";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,33 +21,29 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-return (
-    <html lang="en">
-      <body className='flex flex-col justify-start gap-4 p-20 items-center min-h-screen'>
-        
-        <header className="flex flex-col items-center">
-          <h1>React & Next.js</h1>
-                  <footer
-          style={{
-            marginTop: "40px",
-            padding: "20px",
-            textAlign: "center",
-            background: "#f0f0f0",
-          }}
-        >
-          <p>Hora atual: <Relogio /></p>
-        </footer>
+}) {
+  return (
+    <html lang="pt">
+      <body className="flex flex-col justify-start gap-4 p-10 items-center min-h-screen">
+        {/* Header */}
+        <header className="flex flex-col items-center w-full mb-6">
+          <h1 className="text-3xl font-bold mb-2">React & Next.js</h1>
+          <p>
+            Hora atual: <Relogio />
+          </p>
         </header>
-        
-        <main className="bg-blue-200 p-5 rounded-2xl max-w-2xl min-h-[70vh]">
+
+        {/* Main */}
+        <main className="bg-blue-200 p-5 rounded-2xl max-w-2xl w-full min-h-[70vh]">
           {children}
         </main>
-        
-        <footer>DIW</footer>
 
+        {/* Footer */}
+        <footer className="w-full text-center mt-10 p-4 bg-gray-100 rounded-xl">
+          DIW
+        </footer>
       </body>
     </html>
   );
