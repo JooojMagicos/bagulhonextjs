@@ -1,4 +1,4 @@
-import MagiaDoJSX from "@/Components/MagiaDoJSX/MagiaDoJSX"
+import MagiaDoJSX from "@/components/MagiaDoJSX/MagiaDoJSX"
 import Link from 'next/link'
 export function Header()
 {
@@ -13,6 +13,7 @@ export function Header()
           <Link href="/projetos">Projetos</Link>
           <Link href="/contador">Contador</Link>
           <Link href="/input">Input</Link>
+          <Link href="/produtos">produtos</Link>
 
         </nav>
     </header>

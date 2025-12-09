@@ -1,5 +1,5 @@
 import React from "react";
-import ContadorPersonalizado from "@/Components/contadorPersonalizado";
+import ContadorPersonalizado from "@/components/contadorPersonalizado";
 
 interface Tecnologia {
   title: string;

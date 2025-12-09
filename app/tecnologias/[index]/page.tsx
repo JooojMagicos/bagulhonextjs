@@ -1,4 +1,4 @@
-import TecnologiaDetailsCard from "@/Components/TecnologiaDetailsCard";
+import TecnologiaDetailsCard from "@/components/TecnologiaDetailsCard";
 import tecnologias from "@/app/data/tecnologias.json";
 import Link from "next/link";
 import "@/styles/tecnologias.css";

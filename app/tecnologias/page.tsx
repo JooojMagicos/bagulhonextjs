@@ -1,7 +1,7 @@
 import Link from "next/link";
 import tecnologias from "@/app/data/tecnologias.json";
 import "@/styles/tecnologias.css";
-import ContadorPersonalizado from "@/Components/contadorPersonalizado";
+import ContadorPersonalizado from "@/components/contadorPersonalizado";
 
 export default function TecnologiasPage() {
   return (

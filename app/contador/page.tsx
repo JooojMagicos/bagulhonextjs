@@ -1,4 +1,4 @@
-import Contador from "@/Components/contador";
+import Contador from "@/components/contador";
 
 export default function ContadorPage() {
   return (
