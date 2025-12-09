@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: false, // desativa Turbopack
+  images: {
+    domains: ["deisishop.pythonanywhere.com"],
   },
-}
+};
 
 module.exports = nextConfig;
-
