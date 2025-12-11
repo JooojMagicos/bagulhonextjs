@@ -4,10 +4,17 @@ import { Product } from "@/models/interfaces";
 
 interface ProductCardProps {
   product: Product;
-  addToCart: (p: Product) => void;
+  addToCart?: (p: Product) => void;
+  removeFromCart?: (id: number) => void;
+  inCart?: boolean; // indica se o card está sendo mostrado dentro do carrinho
 }
 
-export default function ProductCard({ product, addToCart }: ProductCardProps) {
+export default function ProductCard({
+  product,
+  addToCart,
+  removeFromCart,
+  inCart = false,
+}: ProductCardProps) {
   const price = Number(product.price) || 0;
   const IMAGE_BASE_URL = "https://deisishop.pythonanywhere.com";
   const imageUrl = `${IMAGE_BASE_URL}${product.image}`;
@@ -31,19 +38,31 @@ export default function ProductCard({ product, addToCart }: ProductCardProps) {
         Categoria: {product.category}
       </p>
 
-      <button
-        onClick={() => addToCart(product)}
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition w-full"
-      >
-        Comprar
-      </button>
+      {/* BOTÃO DINÂMICO */}
+      {inCart ? (
+        <button
+          onClick={() => removeFromCart?.(product.id)}
+          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition w-full"
+        >
+          Remover
+        </button>
+      ) : (
+        <button
+          onClick={() => addToCart?.(product)}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition w-full"
+        >
+          Comprar
+        </button>
+      )}
 
-      <a
-        href={`/produtos/${product.id}`}
-        className="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition block text-center mt-2"
-      >
-        Ver Detalhes
-      </a>
+      {!inCart && (
+        <a
+          href={`/produtos/${product.id}`}
+          className="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition block text-center mt-2"
+        >
+          Ver Detalhes
+        </a>
+      )}
     </div>
   );
 }
