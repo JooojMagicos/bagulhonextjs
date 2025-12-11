@@ -6,7 +6,7 @@ interface ProductCardProps {
   product: Product;
   addToCart?: (p: Product) => void;
   removeFromCart?: (id: number) => void;
-  inCart?: boolean; // indica se o card está sendo mostrado dentro do carrinho
+  inCart?: boolean; 
 }
 
 export default function ProductCard({
@@ -38,7 +38,6 @@ export default function ProductCard({
         Categoria: {product.category}
       </p>
 
-      {/* BOTÃO DINÂMICO */}
       {inCart ? (
         <button
           onClick={() => removeFromCart?.(product.id)}

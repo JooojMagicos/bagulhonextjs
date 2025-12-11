@@ -18,10 +18,10 @@ export default function ProdutosPage() {
     fetcher
   );
 
-  // carrinho (persistido no localStorage)
+
   const [cart, setCart] = useState<Product[]>([]);
 
-  // carregar cart do localStorage no mount
+
   useEffect(() => {
     try {
       const raw = localStorage.getItem("cart");
@@ -36,7 +36,6 @@ export default function ProdutosPage() {
     }
   }, []);
 
-  // persistir cart sempre que mudar
   useEffect(() => {
     try {
       localStorage.setItem("cart", JSON.stringify(cart));
@@ -53,10 +52,10 @@ export default function ProdutosPage() {
     setCart((prev) => prev.filter((p) => p.id !== id));
   };
 
-  // total derivado com useMemo -> garante number
+
   const total = useMemo(() => {
     if (!cart || cart.length === 0) return 0;
-    // converter price para number com fallback 0
+
     return cart.reduce((acc, p) => {
       const priceNum = Number((p as any).price) || 0;
       return acc + priceNum;
@@ -72,13 +71,12 @@ export default function ProdutosPage() {
     <div className="p-6">
       <h1 className="text-3xl font-bold text-center mb-8">DEISI Shop – Produtos</h1>
 
-      {/* controles */}
+
       <div className="flex justify-center mb-6 gap-4">
         <Button color="primary" variant="shadow">Produtos Disponíveis</Button>
         <Button color="secondary" variant="bordered">🛒 Carrinho ({cart.length})</Button>
       </div>
 
-      {/* lista de produtos */}
       <h2 className="text-xl font-bold mb-3">Produtos</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
         {productsToShow.map((p) => (
@@ -86,7 +84,7 @@ export default function ProdutosPage() {
         ))}
       </div>
 
-      {/* carrinho */}
+
       <h2 className="text-xl font-bold mb-3">Carrinho</h2>
       {cart.length === 0 ? (
         <p className="text-gray-600">Nenhum produto no carrinho.</p>
@@ -94,7 +92,7 @@ export default function ProdutosPage() {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {cart.map((p, idx) => (
-              // usar key única (idx para permitir múltiplas unidades do mesmo produto)
+           
               <ProductCard
                 key={`cart-${idx}-${p.id}`}
                 product={p}
